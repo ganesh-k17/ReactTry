@@ -131,6 +131,12 @@ export default Counter;
 We could not update state directly in the event handler as the state should update the DOM.  This can be solved by React method in base  class (Component) - this.setState({ }) as in below.  Here the opject passd in the setState() method will be mapped to the state object's attributes.
 
 ```jsx
+
+state = { 
+        Count: 2,
+        tags: ['tag1','tag2','tag3']
+     } 
+     
 render() { 
 
         let classes = "badge m-2 bg-"
