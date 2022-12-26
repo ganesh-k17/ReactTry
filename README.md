@@ -125,3 +125,32 @@ class Counter extends Component {
  
 export default Counter;
 ```
+
+## Updating State
+
+We could not update state directly in the event handler as the state should update the DOM.  This can be solved by React method in base  class (Component) - this.setState({ }) as in below.  Here the opject passd in the setState() method will be mapped to the state object's attributes.
+
+```jsx
+render() { 
+
+        let classes = "badge m-2 bg-"
+        classes += (this.state.Count ===0) ? "warning" : "primary";
+
+        return (
+            <React.Fragment>
+                <span style={ { fontSize:25, backgroundColor: 'blue' } } className={classes}>{this.getCount()}</span>
+                <span><button onClick={ this.handleIncrement } className="btn btn-secondary btn-sm">Increment</button></span>
+                <span><button onClick={ this.handleDecrement } className="btn btn-secondary btn-sm">Decrement</button></span>
+                <ul>
+                    { this.renderTags() }
+                </ul>
+            </React.Fragment>
+        );
+    }
+    
+    handleIncrement = () => {
+        this.setState({ Count: this.state.Count + 1 });
+        console.log("incremented", this);
+    }
+```
+
