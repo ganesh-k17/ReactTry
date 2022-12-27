@@ -14,11 +14,20 @@ class Counters extends Component {
     render() { 
         return (
         <div>
-           { 
-           this.state.counters.map( counter => 
-            <Counter key={counter.id} value={ counter.value} selected = {true}/>)}
+        { 
+           this.state.counters.map( 
+            // counter => <Counter onDeleted = { this.handleDelete } key={counter.id} value={ counter.value} selected = {true}/>
+            counter => <Counter onDeleted = {this.handleDelete} value={ counter.value} key={counter.id} id={counter.id} selected = {true}/>
+            )
+        }
         </div>
         );
+    }
+
+    handleDelete = (id) => {
+        console.log("Deleted", id);
+        // let counters= this.state.counters.find({id:id}).splice(id,1)
+        // this.setState({counters: this.state.counters.splice(id,1)})
     }
 }
  

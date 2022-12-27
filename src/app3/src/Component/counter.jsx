@@ -17,8 +17,9 @@ class Counter extends Component {
         return (
             <React.Fragment>
                 <span style={ { fontSize:25, backgroundColor: 'blue' } } className={classes}>{this.getCount()}</span>
-                <span><button onClick={ this.handleIncrement } className="btn btn-secondary btn-sm">Increment</button></span>
-                <span><button onClick={ this.handleDecrement } className="btn btn-secondary btn-sm">Decrement</button></span>
+                <span><button onClick={ this.handleIncrement } className="btn btn-secondary btn-sm m-2">Increment</button></span>
+                <span><button onClick={ this.handleDecrement } className="btn btn-secondary btn-sm m-2">Decrement</button></span>
+                <span><button onClick={() => this.props.onDeleted(this.props.id) } className="btn btn-danger btn-sm m-2">Delete</button></span>
                 <ul>
                     { this.renderTags() }
                 </ul>
@@ -30,7 +31,7 @@ class Counter extends Component {
         let tags = this.state.tags;
         if (tags.length === 0)
             return <p>No tags available"</p>
-        return tags.map(tag => <li key={ tag }><button onClick={ () => this.handleTag(tag)}>{tag}</button></li>)
+        return tags.map(tag => <li key={ tag }><button onClick={ () => this.handleTag(tag)}>tag:{tag}</button></li>)
     }
 
     handleTag = (tag) => {
