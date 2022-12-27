@@ -11,3 +11,5 @@
 Axios 
 
 ## Spread operator
+
+https://javascript.plainenglish.io/7-es6-spread-operator-tricks-every-developer-should-know-f162d602c9d6
