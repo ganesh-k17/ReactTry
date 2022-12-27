@@ -14,18 +14,48 @@ class Counters extends Component {
     render() { 
         return (
         <div>
+        <div> <button onClick={()=>this.handleReset()} className='btn btn-secondary btn-sm m-2'>Reset</button> </div> 
         { 
            this.state.counters.map( 
-            // counter => <Counter onDeleted = { this.handleDelete } key={counter.id} value={ counter.value} selected = {true}/>
-            counter => <Counter onDeleted = {this.handleDelete} value={ counter.value} key={counter.id} id={counter.id} selected = {true}/>
+            counter => <Counter onDecremented = {this.handleDecrement}  onIncremented = {this.handleIncrement} onDeleted = {this.handleDelete} value={ counter} key={counter.id} selected = {true}/>
             )
         }
         </div>
         );
     }
 
-    handleDelete = (id) => {
-        console.log("Deleted", id);
+
+    handleIncrement = (counter) =>{
+        console.log("incremented");
+       const counters = [...this.state.counters];
+       const index = counters.indexOf(counter);
+       counters[index] = { ...counter };
+       counters[index].value++;
+       this.setState({counters});
+
+    }
+
+    handleDecrement = (counter) =>{
+        console.log("incremented");
+       const counters = [...this.state.counters];
+       const index = counters.indexOf(counter);
+       counters[index] = { ...counter };
+       counters[index].value--;
+       this.setState({counters});
+
+    }
+
+    handleReset = ()=> {
+        console.log("reset handled");
+        const counters = this.state.counters.map(counter => {
+            counter.value = 0;
+            return counter;
+        })
+        this.setState({counters})
+    }
+
+    handleDelete = (counter) => {
+        console.log("Deleted", counter.id);
         // let counters= this.state.counters.find({id:id}).splice(id,1)
         // this.setState({counters: this.state.counters.splice(id,1)})
     }
