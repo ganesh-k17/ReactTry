@@ -1,8 +1,8 @@
 
 import './App.css';
-import Navbar from './components/navbar';
 import React from 'react';
-import Counters from './components/counters'
+import Navbar from './Component/navbar';
+import Counters from './Component/counters';
 
 function App() {
   return (
