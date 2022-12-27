@@ -17,3 +17,7 @@ https://javascript.plainenglish.io/7-es6-spread-operator-tricks-every-developer-
 ## Functional Components vs Class Components in React
 
 https://www.geeksforgeeks.org/differences-between-functional-components-and-class-components-in-react/
+
+## Destructuring arguments
+
+https://www.geeksforgeeks.org/parameter-destructuring/
