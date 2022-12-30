@@ -160,3 +160,19 @@ render() {
     }
 ```
 
+## Lifecycle hooks
+
+* Mount phase:
+
+Constructor
+Render
+componentDidMount
+
+* Update
+
+render
+ComponentDidUpdate
+
+* UnMount
+
+componentWillUnmount
