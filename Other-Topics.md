@@ -20,3 +20,9 @@ https://www.geeksforgeeks.org/differences-between-functional-components-and-clas
 ## Destructuring arguments
 
 https://www.geeksforgeeks.org/parameter-destructuring/
+
+## React.FC
+
+https://spin.atomicobject.com/2022/01/04/think-twice-react-fc/#:~:text=FC%20provides%20an%20implicit%20definition,JavaScript
+
+## Aplication Context in React
