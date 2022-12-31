@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getMovies } from '../services/fakeMovieService'
-import DeleteComponent from './delete';
+import Like from './like';
+// import DeleteComponent from './delete';
 
 class Movies extends Component {
     state = { 
@@ -10,6 +11,14 @@ class Movies extends Component {
     handleDelte = (movie) => {
         console.log('clicked', movie);
         const movies = this.state.movies.filter(m => m._id !== movie._id);
+        this.setState({movies});
+    }
+
+    handleLike = (movie) => {
+        
+        const movies = [...this.state.movies];
+        const index = movies.indexOf(movie);
+        movie.liked = !movie.liked; // movie.liked ? false: true;
         this.setState({movies});
     }
 
@@ -32,6 +41,7 @@ class Movies extends Component {
                             <th>Stock</th>
                             <th>Rate</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody className="tbody">
@@ -42,6 +52,7 @@ class Movies extends Component {
                                 <td>{movie.genre.name}</td>
                                 <td>{movie.numberInStock}</td>
                                 <td>{movie.dailyRentalRate}</td>
+                                <td><Like liked = {movie.liked} onLiked ={ () => this.handleLike(movie) }/></td>
                                 <td><i onClick={() => this.handleDelte(movie)} className="fa fa-trash" aria-hidden="true"></i></td>
                             </tr>
                         )) 
