@@ -176,3 +176,11 @@ ComponentDidUpdate
 * UnMount
 
 componentWillUnmount
+
+## Routing
+
+* Route Parameters
+* Query String
+* Redirect
+* Not Found (404) Pages
+* Nested Routing
