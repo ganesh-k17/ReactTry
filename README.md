@@ -182,3 +182,10 @@ componentWillUnmount
 ```jsx
 npm i react-router-dom
 ```
+
+* Route Parameters
+* Query String
+* Redirect
+* Not Found (404) Pages
+* Nested Routing
+
