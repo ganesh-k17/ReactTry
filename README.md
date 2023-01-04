@@ -176,3 +176,9 @@ ComponentDidUpdate
 * UnMount
 
 componentWillUnmount
+
+## Routing
+
+```jsx
+npm i react-router-dom
+```
