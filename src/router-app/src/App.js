@@ -13,14 +13,20 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+         <NavBar />
         <div className="content">
-          <Routes>
+        <Routes>
+            <Route path="/products" element={<Products />} />
+            <Route path="/posts" element={<Posts/>} />
+            <Route path="/admin" element={<Dashboard/>} />
+            <Route path="/" element={<Home/>} />
+          </Routes>
+          {/* <Routes>
             <Route path="/products" exact element={<Products />} />
             <Route path="/posts" exact element={<Posts/>} />
             <Route path="/admin" exact element={<Dashboard/>} />
             <Route path="/" exact element={<Home/>} />
-          </Routes>
+          </Routes> */}
         </div>
       </div>
     );
