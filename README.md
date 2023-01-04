@@ -267,7 +267,6 @@ registerServiceWorker();
 
 ```
 
-
 ## Routing with Link
 
 ```jsx
