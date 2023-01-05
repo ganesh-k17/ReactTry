@@ -347,3 +347,43 @@ ReactDOM.render(
 registerServiceWorker();
 
 ```
+
+
+## Route parameters
+
+In React V6 we could not use route parameter directrly we have to use hooks to get the parameters.  
+So since class component is allowed only in body of function component we have use function component to use router parameter.
+
+```jsx
+
+app.js:
+
+ <Routes>
+    <Route path="/products" element={<Products isValid={true}/>} />  {/*passed isValid property.  IN V6 we could not pass router props to the element. For that we have to use hooks like useNavigate for navigate, useParams for match.params, useLocation for location*/}
+    <Route path="/products/:id" element={<ProductDetails/>} /> 
+    <Route path="/posts/:year/:month" element={<Posts/>} />
+    <Route path="/admin" element={<Dashboard/>} />
+    <Route path="/" element={<Home/>} />
+  </Routes>
+
+productDetails.jsx
+
+import React, { Component } from "react";
+import { useParams } from "react-router-dom";
+
+
+const ProductDetails = (props)  => {
+
+    let {id} = useParams();
+    console.log("id", id);
+
+    return (
+      <div>
+        <h1>Product Details - {id}</h1>
+        <button onClick={this.handleSave}>Save</button>
+      </div>
+    );
+}
+
+export default ProductDetails;
+```

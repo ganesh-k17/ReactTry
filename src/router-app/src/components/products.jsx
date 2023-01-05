@@ -10,6 +10,9 @@ class Products extends Component {
   };
 
   render() {
+
+    console.log("Is Valid",this.props.isValid); // check whether passed prop isValid passed from router component is gettting retrieved.
+
     return (
       <div>
         <h1>Products</h1>
