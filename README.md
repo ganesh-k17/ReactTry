@@ -387,3 +387,39 @@ const ProductDetails = (props)  => {
 
 export default ProductDetails;
 ```
+
+## UseMatch hooks
+
+this hook is used to match route parameter.
+
+```jsx
+ <Routes>
+    <Route path="/products" element={<Products isValid={true}/>} />  {/*passed isValid property.  IN V6 we could not pass router props to the element. For that we have to use hooks like useNavigate for navigate, useParams for match.params, useLocation for location*/}
+    <Route path="/products/:id" element={<ProductDetails/>} /> 
+    <Route path="/posts/:year/:month" element={<Posts/>} />
+    <Route path="/admin" element={<Dashboard/>} />
+    <Route path="/" element={<Home/>} />
+</Routes>
+
+// Posts component 
+
+import React from "react";
+import { useMatch } from "react-router-dom";
+
+const Posts = (props) => {
+  ///posts/:year/:month
+  const match = useMatch("posts/:year/:month");
+  console.log(match);
+  const year = match.params.year;
+  const month = match.params.month;
+  return (
+    <div>
+      <h1>Posts</h1>
+      Year: {year} , Month: {month}
+    </div>
+  );
+};
+
+export default Posts;
+
+```

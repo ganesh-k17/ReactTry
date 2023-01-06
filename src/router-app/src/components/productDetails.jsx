@@ -24,7 +24,7 @@ export default ProductDetails;
 
 // class ProductDetails extends Component {
 
-//   constructor(){
+//   constructor(){        // Wont work... to useParams(), it should be functional component.
 //     super();
 //     let { id } = useParams();
 //     console.log("id", id);
