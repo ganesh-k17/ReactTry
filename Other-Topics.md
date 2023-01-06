@@ -26,3 +26,9 @@ https://www.geeksforgeeks.org/parameter-destructuring/
 https://spin.atomicobject.com/2022/01/04/think-twice-react-fc/#:~:text=FC%20provides%20an%20implicit%20definition,JavaScript
 
 ## Aplication Context in React
+
+https://reactjs.org/docs/context.html
+
+## Component Composition
+
+https://reactjs.org/docs/composition-vs-inheritance.html
