@@ -23,6 +23,7 @@ class App extends Component {
           </Routes> */}
           <Routes>
             <Route path="/products" element={<Products isValid={true}/>} />  {/*passed isValid property.  IN V6 we could not pass router props to the element. For that we have to use hooks like useNavigate for navigate, useParams for match.params, useLocation for location*/}
+            <Route path="/products?sortyBy=id" element={<Products isValid={true}/>} />
             <Route path="/products/:id" element={<ProductDetails/>} /> 
             <Route path="/posts/:year/:month" element={<Posts/>} />
             <Route path="/admin" element={<Dashboard/>} />
