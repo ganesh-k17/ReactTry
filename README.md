@@ -423,3 +423,7 @@ const Posts = (props) => {
 export default Posts;
 
 ```
+
+## React Route references
+
+https://reactrouter.com/en/main/hooks/use-params
