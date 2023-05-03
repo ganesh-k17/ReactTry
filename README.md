@@ -1,5 +1,13 @@
 # React
 
+## Must to learn
+
+* React create app tool
+* React hooks (useState, useEffect, useReducer, useRef, useCallback, userMemo, useContext)
+* React router (reactMux, reactGin)
+* Other tools:
+  - 
+
 ## Install create react app library
 
 ```bash
