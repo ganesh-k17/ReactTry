@@ -12,4 +12,5 @@
 ## Single spa
 
 https://single-spa.js.org/
+
 https://blog.bitsrc.io/building-microfrontends-using-single-spa-framework-94019ca2fb4d
